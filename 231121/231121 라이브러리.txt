@@ -1,0 +1,67 @@
+@라이브러리
+클래스 100개를 파일별로 관리하기보다는 기능별로 압축파일로
+생성해서 사용하는 방식이다. 
+일반적으로 JAR(압축파일) 클래스와 인터페이스의 바이트코드파일(.class)을 압축한다.
+
+압축할 수 있는 방법
+- 콘솔(명령) 프로그램 실행
+- 이클립스 Build Path
+
+@라이브러리 만드는 방법
+1) 프로젝트 만들기 : my_lib
+패키지1/패키지2 : A.class/B.class
+
+2) 압축할 수 있는 폴더 만들기
+src 같은 depth < dist(jar파일 생성)
+
+3) 새로운 프로젝트 만들기 > jar 압축 해제
+my_application프로젝트만들기
+src > app(패키지) > main.java(main method()호출방식)
+
+4) main_method() 실행 : my_lib.jar
+import 해서 A.class B.class 메소드 출력
+1) 이클립스 해제 방식
+File > Build Path > Configure Build > 라이브러리 > add External jar
+
+2) 콘솔창(cmd)에 명령어로 해제하는 방식
+my_application > app > 명령어 콘솔로 찍어서 출력함
+java -classpath C:\Users\User\eclipse-workspace\my_lib\dist\my_lib.jar;. app.Main
+
+@모듈화 방식
+자바 9버전 부터 지원하는 방식이다.
+모듈은 패키지 관리기능까지 포함된 모든 패키지에 외부 프로그램에서
+접근이 가능하지만 모듈은 은닉하여서 접근할 수 없게 만들 수도 있다.
+패키지를 모두 사용할 필요가 없고 은닉할 패키지를 선택해서 구현할 수 있다.
+
+1) 모듈 기술자(module-info.java) 모듈간의 의존관계를 만든다.
+모듈A(프로젝트1)->모듈B(프로젝트2)-> 모듈3(프로젝트3)
+
+2) module-info.java 파일이 존재하면 모듈이라고 생각한다.
+모듈도 라이브러리와 같이 배포하고 사용할 수 있다.
+
+3) 대규모 응용프로그램은 기능별 모듈화 시켜서 개발시키고 있다.
+재사용성과 유지보수 차원에서 모듈화 패킹이 필요하다.
+
+- 프로젝트 방식
+
+- Jar 파일 압축 해제 방식
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
