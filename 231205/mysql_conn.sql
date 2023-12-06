@@ -29,28 +29,28 @@ show tables;
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
 values ('202301','홍길동',18,2,'남자','010-2989-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202302','홍이동',19,2,'여자','010-2525-5454');
+values ('202302','김길동',19,2,'여자','010-2333-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202303','홍삼동',20,2,'남자','010-3636-5454');
+values ('202303','홍일동',20,2,'남자','010-3563-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202304','홍사동',17,2,'여자','010-6868-5454');
+values ('202304','홍이동',17,2,'여자','010-683568-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202305','홍오동',21,2,'남자','010-5959-5454');
+values ('202305','홍삼동',21,2,'남자','010-5459-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202306','홍육동',22,2,'여자','010-4242-5454');
+values ('202306','홍사동',22,2,'여자','010-4112-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202307','홍칠동',23,2,'남자','010-4848-5454');
+values ('202307','홍오동',23,2,'남자','010-4348-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202308','홍팔동',16,2,'남자','010-3232-5454');
+values ('202308','홍육동',16,2,'남자','010-3552-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202309','홍구동',24,2,'여자','010-9898-5454');
+values ('202309','홍칠동',24,2,'여자','010-9008-5454');
 insert into jdbc.student_info(std_id, std_name, std_age, std_grade, std_gender, std_phone)
-values ('202310','홍십동',25,2,'여자','010-6565-5454');
+values ('202310','홍팔동',25,2,'여자','010-6005-5454');
 
 #테이블 보기(전체)
 select * from jdbc.student_info;
 
-#테이블 보기(부분) = where 조간문을 작성한다.
+#테이블 보기(부분) = where 조건문을 작성한다.
 select * from jdbc.student_info where std_gender='남자';
 select * from jdbc.student_info where std_gender='여자';
 
@@ -75,7 +75,7 @@ create table baseball.rank(
 
 #랭킹 테이블 보기
 select * from baseball.rank order by time desc;
-select * from baseball.rank order by time desc;
+select * from baseball.rank order by time asc; # 내림차순
 
 #랭킹 insert : 입력하기
 insert into baseball.rank (name,time) values ('SBS', 5);
