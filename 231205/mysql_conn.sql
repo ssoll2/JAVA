@@ -64,7 +64,7 @@ delete from jdbc.student_info where std_id='202302';
 create database baseball;
 #데이터 베이스 확인
 show databases;
-#데이터 베이스 선태하기
+#데이터 베이스 선택하기
 use baseball;
 
 #랭킹 테이블 만들기
