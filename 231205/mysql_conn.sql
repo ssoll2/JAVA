@@ -70,7 +70,7 @@ use baseball;
 #랭킹 테이블 만들기
 create table baseball.rank(
 	name VARCHAR(30) NOT NULL,
-    time INT NOT NULL
+        time INT NOT NULL
 );
 
 #랭킹 테이블 보기
